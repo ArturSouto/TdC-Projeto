@@ -1,4 +1,3 @@
-import random
 import time
 
 def intercala(inicio, meio, fim, X):
@@ -37,10 +36,12 @@ def mergesort(inicio, fim, v):
         intercala(inicio, meio, fim, v)
 
 
-v = random.sample(range(1, 100001), 1000)
-inicio_tempo = time.perf_counter()
-mergesort(0, len(v) - 1, v)
-fim_tempo = time.perf_counter()
+vetor = []
 
-print(v)
+inicio_tempo = time.time()
+mergesort(0, len(vetor) - 1, vetor)
+fim_tempo = time.time()
+
+print("Vetor ordenado:")
+print(vetor)
 print(f"\nTempo de execução: {fim_tempo - inicio_tempo:.6f} segundos")
