@@ -1,11 +1,11 @@
 from random import randint
-TAM = 1000
+TAM = 50000
 
 arquivo = "script.txt"
 arq = open(arquivo, 'w')
 
 for i in range(TAM):
-    numero = randint(10000, 100000)
+    numero = randint(1, 90000)
     if i == TAM - 1:
         arq.write(f"{numero}")
     else:
